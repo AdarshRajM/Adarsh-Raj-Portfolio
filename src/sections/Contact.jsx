@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolio';
 import { Mail, MessageSquare, Send } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -38,71 +37,35 @@ const Contact = () => {
     
     setStatus('sending');
 
-    // EmailJS credentials
-    // Store these in your .env file: VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID"; 
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY";
-
-    // If EmailJS hasn't been configured, fallback to Formspree
-    if (SERVICE_ID === "YOUR_SERVICE_ID" || !SERVICE_ID) {
-      console.log('EmailJS keys not configured. Falling back to Formspree.');
-      try {
-        const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORMSPREE_ID";
-        const formspreeUrl = `https://formspree.io/f/${FORMSPREE_ID}`;
-        
-        const response = await fetch(formspreeUrl, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/adarshrajmanii@gmail.com", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
             name: formData.name,
             email: formData.email,
             message: formData.message,
-            _replyto: formData.email,
-            to: "adarshrajmanii@gmail.com"
-          })
-        });
+            _subject: "New Message from Portfolio Website!"
+        })
+      });
 
-        if (response.ok) {
-          console.log('SUCCESS! Form submitted via Formspree.');
-          setStatus('success');
-          setFormData({ name: '', email: '', message: '' });
-        } else {
-          console.error('FAILED to send using Formspree.');
-          setStatus('error');
-        }
-      } catch (err) {
-        console.error('FAILED...', err);
-        setStatus('error');
-      }
-      setTimeout(() => setStatus(null), 5000);
-      return;
-    }
-
-    const templateParams = {
-      user_name: formData.name,
-      user_email: formData.email,
-      message: formData.message,
-      to_email: "adarshrajmanii@gmail.com",
-      date_time: new Date().toLocaleString()
-    };
-
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+      if (response.ok) {
+        console.log('SUCCESS! Message sent via FormSubmit.');
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
+      } else {
+        console.error('FAILED to send message.');
         setStatus('error');
-      })
-      .finally(() => {
-        setTimeout(() => setStatus(null), 5000);
-      });
+      }
+    } catch (err) {
+      console.error('FAILED...', err);
+      setStatus('error');
+    } finally {
+      setTimeout(() => setStatus(null), 5000);
+    }
   };
 
   return (
