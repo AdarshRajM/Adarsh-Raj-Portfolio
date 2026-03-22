@@ -38,9 +38,14 @@ function App() {
             <Internship />
             <Training />
             <Projects />
-            <div className="bg-transparent py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-transparent py-16 pb-8">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Achievements />
+              </div>
+            </div>
+            
+            <div className="bg-slate-50 dark:bg-slate-900/50 py-16">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Certifications />
               </div>
             </div>

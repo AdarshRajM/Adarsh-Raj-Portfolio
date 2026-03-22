@@ -106,46 +106,53 @@ export const portfolioData = {
     }
   ],
   achievements: [
-    "Achieved a 50-day coding streak on LeetCode",
-    "Earned 5-star rating in Python on HackerRank",
-    "Earned multiple badges in Problem Solving, C++, Java, and C"
+    {
+      title: "Achieved a 50-day coding streak on LeetCode",
+      image: "/leetcode-50days.jpg"
+    },
+    {
+      title: "Earned 5-star rating in Python on HackerRank"
+    },
+    {
+      title: "Earned multiple badges in Problem Solving, C++, Java, and C"
+    }
   ],
   certifications: [
     {
       title: "Mobile App Development",
       issuer: "Nasscom Foundation",
       image: "/certificates/mobile-app-development.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/1D5qdhy6FlAHyhVAkulx5MTbY2C6OJoZ9/view?usp=drive_link"
     },
     {
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
       image: "/certificates/problem-solving.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/14IC-s-8TjV1dxB2xnJ9EgBpaxhGFtkkG/view?usp=drive_link"
     },
     {
       title: "Social Networks",
       issuer: "NPTEL IIT Madras",
       image: "/certificates/social-networks.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/1z0716gfTaxLEMFubg41_UNqTgYnuKSpt/view?usp=drive_link"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
       issuer: "Google | Coursera",
       image: "/certificates/computer-networking.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/1huStzEUh5J02jLF9D4estK5OFAzAzhMm/view?usp=drive_link"
     },
     {
       title: "Community Development Project",
       issuer: "Bachpan Crafting the Youth",
       image: null,
-      link: "#"
+      link: "https://drive.google.com/file/d/12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty/view?usp=drive_link"
     },
     {
       title: "Responsive Web Design",
       issuer: "freeCodeCamp",
       image: "/certificates/responsive-web-design.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/1KREfCzSoOb1KMPwI5fiY8RW6VXpHSwpQ/view?usp=drive_link"
     }
   ],
   education: [

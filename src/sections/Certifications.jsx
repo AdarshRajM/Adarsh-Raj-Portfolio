@@ -11,14 +11,14 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="h-full flex flex-col pt-8">
-      <div className="mb-8 relative z-10 w-full text-right">
-        <h2 className="text-3xl font-bold text-slate-900 dark:text-white inline-flex flex-col items-end">
+      <div className="mb-12 relative z-10 w-full text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white inline-flex flex-col items-center">
           Certifications
-          <div className="h-1 w-20 bg-gradient-to-l from-indigo-600 to-purple-600 mt-2 rounded-full"></div>
+          <div className="h-1 w-20 bg-gradient-to-l from-indigo-600 to-purple-600 mt-4 rounded-full"></div>
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certifications.map((cert, index) => (
           <TiltCard key={index} delay={index * 0.1}>
             <div className="relative bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-2xl border border-white/40 dark:border-slate-700/50 shadow-lg hover:shadow-2xl transition-all h-full flex flex-col overflow-hidden" style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }}>
@@ -58,9 +58,9 @@ const Certifications = () => {
                       href={cert.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full flex justify-center items-center gap-2 px-4 py-2.5 bg-slate-100/80 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl font-semibold transition-colors shadow-sm text-sm"
+                      className="w-full flex justify-center items-center gap-2 px-4 py-3 bg-slate-100/80 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 rounded-xl font-semibold transition-colors shadow-sm text-sm"
                     >
-                      View Certificate
+                      View / Download
                       <ExternalLink size={16} />
                     </motion.a>
                   </div>
