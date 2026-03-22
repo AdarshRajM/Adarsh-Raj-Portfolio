@@ -121,37 +121,37 @@ export const portfolioData = {
     {
       title: "Mobile App Development",
       issuer: "Nasscom Foundation",
-      image: "/certificates/mobile-app-development.png",
+      image: "https://drive.google.com/thumbnail?id=1D5qdhy6FlAHyhVAkulx5MTbY2C6OJoZ9&sz=w800",
       link: "https://drive.google.com/file/d/1D5qdhy6FlAHyhVAkulx5MTbY2C6OJoZ9/view?usp=drive_link"
     },
     {
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
-      image: "/certificates/problem-solving.png",
+      image: "https://drive.google.com/thumbnail?id=14IC-s-8TjV1dxB2xnJ9EgBpaxhGFtkkG&sz=w800",
       link: "https://drive.google.com/file/d/14IC-s-8TjV1dxB2xnJ9EgBpaxhGFtkkG/view?usp=drive_link"
     },
     {
       title: "Social Networks",
       issuer: "NPTEL IIT Madras",
-      image: "/certificates/social-networks.png",
+      image: "https://drive.google.com/thumbnail?id=1z0716gfTaxLEMFubg41_UNqTgYnuKSpt&sz=w800",
       link: "https://drive.google.com/file/d/1z0716gfTaxLEMFubg41_UNqTgYnuKSpt/view?usp=drive_link"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
       issuer: "Google | Coursera",
-      image: "/certificates/computer-networking.png",
+      image: "https://drive.google.com/thumbnail?id=1huStzEUh5J02jLF9D4estK5OFAzAzhMm&sz=w800",
       link: "https://drive.google.com/file/d/1huStzEUh5J02jLF9D4estK5OFAzAzhMm/view?usp=drive_link"
     },
     {
       title: "Community Development Project",
       issuer: "Bachpan Crafting the Youth",
-      image: null,
+      image: "https://drive.google.com/thumbnail?id=12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty&sz=w800",
       link: "https://drive.google.com/file/d/12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty/view?usp=drive_link"
     },
     {
       title: "Responsive Web Design",
       issuer: "freeCodeCamp",
-      image: "/certificates/responsive-web-design.png",
+      image: "https://drive.google.com/thumbnail?id=1KREfCzSoOb1KMPwI5fiY8RW6VXpHSwpQ&sz=w800",
       link: "https://drive.google.com/file/d/1KREfCzSoOb1KMPwI5fiY8RW6VXpHSwpQ/view?usp=drive_link"
     }
   ],
