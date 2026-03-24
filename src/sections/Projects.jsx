@@ -26,8 +26,30 @@ const Projects = () => {
   const filteredProjects = getFilteredProjects();
 
   return (
-    <section id="projects" className="py-20 bg-slate-50 dark:bg-slate-900/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+      
+      {/* 3D Animated Background Geometry */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0" style={{ perspective: "1000px" }}>
+        <motion.div 
+          animate={{ rotateX: [0, 360], rotateY: [0, 360], y: [0, -40, 0], x: [0, 30, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/4 left-10 w-40 h-40 border-[2px] border-primary-500/20 rounded-3xl"
+          style={{ transformStyle: "preserve-3d" }}
+        />
+        <motion.div 
+          animate={{ rotateX: [360, 0], rotateY: [0, 360], y: [0, 50, 0], x: [0, -40, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-1/4 right-10 w-64 h-64 border-[1px] border-indigo-500/20 rounded-full"
+          style={{ transformStyle: "preserve-3d" }}
+        />
+        <motion.div 
+          animate={{ rotateZ: [0, 360], scale: [1, 1.2, 1] }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-tr from-primary-500/5 to-indigo-500/5 rounded-full blur-[100px] -z-10"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

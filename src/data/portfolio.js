@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
     name: "Adarsh Raj",
-    title: "Full-Stack Developer | MERN Stack Developer | Software Developer",
+    title: "Full-Stack Developer | MERN Stack Developer | Android Developer | Software Developer",
     tagline: "Passionate about building scalable web applications and solving real-world problems using modern technologies.",
     socials: {
       linkedin: "https://www.linkedin.com/in/aadarshrajj/",
@@ -81,15 +81,6 @@ export const portfolioData = {
         "Concluded a 32-day intensive training program in Object-Oriented Programming and Data Structures & Algorithms, solving 50+ algorithmic challenges to enhance problem-solving capabilities and strengthen foundations for competitive programming and software development.",
         "Built 5+ hands-on C++ projects implementing advanced data structures such as trees, graphs, and hash tables, demonstrating proficiency in scalable and efficient code design."
       ]
-    },
-    {
-      title: "Android Application Development",
-      institution: "Technical Workshop & Self-Learning",
-      duration: "Ongoing",
-      details: [
-        "Gained hands-on experience in Android Application Development with Kotlin and Java.",
-        "Focused on creating intuitive UI/UX with modern Material Design principles, responsive layouts, and managing background processes to build robust mobile applications."
-      ]
     }
   ],
   projects: [
@@ -136,10 +127,12 @@ export const portfolioData = {
       image: "/leetcode-50days.jpg"
     },
     {
-      title: "Earned 5-star rating in Python on HackerRank"
+      title: "Earned 5-star rating in Python on HackerRank",
+      image: "https://img.shields.io/badge/HackerRank-5%20Star%20Python-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
     },
     {
-      title: "Earned multiple badges in Problem Solving, C++, Java, C language, and 10 Days of JS"
+      title: "Earned multiple badges in Problem Solving, C++, Java, C language, and 10 Days of JS",
+      image: "https://img.shields.io/badge/HackerRank-Multiple%20Badges-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
     }
   ],
   certifications: [

@@ -42,12 +42,17 @@ const Achievements = () => {
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-orange-600/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 z-0 pointer-events-none"></div>
 
-                {/* Cover Image for Leetcode */}
+                {/* Cover Image for Leetcode and HackerRank Shields */}
                 {achievement.image && (
-                  <div className="w-full h-64 overflow-hidden bg-slate-900 relative group/img rounded-t-[2rem]" style={{ transform: "translateZ(40px)" }}>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
-                    {/* Zoomed in object-cover */}
-                    <img src={achievement.image} alt={achievement.title} className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover/img:scale-110" loading="lazy" />
+                  <div className="w-full h-64 overflow-hidden bg-slate-950 relative group/img rounded-t-[2rem] flex items-center justify-center p-6" style={{ transform: "translateZ(40px)" }}>
+                    {/* Subtle corner glares */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl"></div>
+                    
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10 pointer-events-none"></div>
+                    
+                    {/* Zoomed in object-contain to ensure no cropping */}
+                    <img src={achievement.image} alt={achievement.title} className="max-w-full max-h-full object-contain transition-transform duration-1000 group-hover/img:scale-110 drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)] z-20" loading="lazy" />
                   </div>
                 )}
                 
