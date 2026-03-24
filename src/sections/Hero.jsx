@@ -178,19 +178,20 @@ const Hero = () => {
               </motion.div>
 
               {/* Decorative Code Badge - High 3D Pop */}
-              <motion.div 
+              <motion.a 
+                href="mailto:adarshrajmanii@gmail.com"
                 style={{
                   transform: "translateZ(80px)",
                 }}
                 whileHover={{ scale: 1.1 }}
-                className="absolute -bottom-4 -left-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-5 rounded-2xl shadow-[0_20px_40px_-5px_rgba(0,0,0,0.3)] flex items-center gap-3 border border-slate-100 dark:border-slate-700/50"
+                className="absolute -bottom-4 -left-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-5 rounded-2xl shadow-[0_20px_40px_-5px_rgba(0,0,0,0.3)] flex items-center gap-3 border border-slate-100 dark:border-slate-700/50 cursor-pointer"
               >
                 <span className="flex h-3 w-3 relative">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                 </span>
                 <span className="text-sm font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wide">Available for Work</span>
-              </motion.div>
+              </motion.a>
             </motion.div>
           </motion.div>
 

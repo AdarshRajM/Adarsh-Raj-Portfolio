@@ -81,6 +81,15 @@ export const portfolioData = {
         "Concluded a 32-day intensive training program in Object-Oriented Programming and Data Structures & Algorithms, solving 50+ algorithmic challenges to enhance problem-solving capabilities and strengthen foundations for competitive programming and software development.",
         "Built 5+ hands-on C++ projects implementing advanced data structures such as trees, graphs, and hash tables, demonstrating proficiency in scalable and efficient code design."
       ]
+    },
+    {
+      title: "Android Application Development",
+      institution: "Technical Workshop & Self-Learning",
+      duration: "Ongoing",
+      details: [
+        "Gained hands-on experience in Android Application Development with Kotlin and Java.",
+        "Focused on creating intuitive UI/UX with modern Material Design principles, responsive layouts, and managing background processes to build robust mobile applications."
+      ]
     }
   ],
   projects: [
@@ -135,7 +144,7 @@ export const portfolioData = {
   ],
   certifications: [
     {
-      title: "Mobile App Development",
+      title: "Mobile App Development (Android Programmer)",
       issuer: "Nasscom Foundation",
       image: "https://drive.google.com/thumbnail?id=1D5qdhy6FlAHyhVAkulx5MTbY2C6OJoZ9&sz=w800",
       link: "https://drive.google.com/file/d/1D5qdhy6FlAHyhVAkulx5MTbY2C6OJoZ9/view?usp=drive_link"
