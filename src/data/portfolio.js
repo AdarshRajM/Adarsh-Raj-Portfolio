@@ -10,10 +10,10 @@ export const portfolioData = {
     }
   },
   about: {
-    description: "I am a Computer Science Engineering student passionate about software development. I build scalable full-stack applications, work deeply with the MERN stack and Spring Boot, and develop robust REST APIs. My core focus is on managing databases optimally and solving real-world problems. I continuously learn new technologies and thrive by working effectively in teams to deliver modern web solutions.",
+    description: "I am a Computer Science Engineering student and Android Developer passionate about software development. I build scalable full-stack applications and mobile apps, work deeply with the MERN stack, Spring Boot, and Android technologies, and develop robust REST APIs. My core focus is on managing databases optimally and solving real-world problems. I continuously learn new technologies and thrive by working effectively in teams to deliver modern, impactful web and mobile solutions.",
     strengths: [
-      "Builds scalable full-stack applications",
-      "Works with MERN stack and Spring Boot",
+      "Builds scalable full-stack and mobile applications",
+      "Works with MERN stack, Spring Boot, and Android",
       "Develops REST APIs",
       "Manages databases",
       "Solves real-world problems",
@@ -44,6 +44,22 @@ export const portfolioData = {
       certificate: {
         image: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&q=80&w=800",
         link: "https://drive.google.com/file/d/1ey5LRd7SlkfzHP9hWuSG47PeXoOW773D/view"
+      }
+    },
+    {
+      role: "Project Trainee & Volunteer",
+      company: "Bachpan: Crafting the Youth",
+      mode: "On-site",
+      duration: "30 Hours Project",
+      description: [
+        "Successfully completed intensive training and a hands-on project in the field of Child Rights and Education under the guidance of Mr. Ritesh Kumar Sharma and Nitesh Kashyap.",
+        "Got exposed to different organizational processes, contributing with diligence and hard work towards community development goals.",
+        "Demonstrated strong communication skills, inquisitiveness, and leadership qualities while engaging in project activities."
+      ],
+      technologies: ["Child Rights", "Education", "Communication", "Leadership", "Community Development"],
+      certificate: {
+        image: "https://drive.google.com/thumbnail?id=12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty&sz=w800",
+        link: "https://drive.google.com/file/d/12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty/view?usp=drive_link"
       }
     }
   ],
@@ -114,7 +130,7 @@ export const portfolioData = {
       title: "Earned 5-star rating in Python on HackerRank"
     },
     {
-      title: "Earned multiple badges in Problem Solving, C++, Java, and C"
+      title: "Earned multiple badges in Problem Solving, C++, Java, C language, and 10 Days of JS"
     }
   ],
   certifications: [
@@ -143,10 +159,28 @@ export const portfolioData = {
       link: "https://drive.google.com/file/d/1huStzEUh5J02jLF9D4estK5OFAzAzhMm/view?usp=drive_link"
     },
     {
-      title: "Community Development Project",
-      issuer: "Bachpan Crafting the Youth",
-      image: "https://drive.google.com/thumbnail?id=12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty&sz=w800",
-      link: "https://drive.google.com/file/d/12HN8Zo3HUUqxSBLuliPi3RMF_i8WKbty/view?usp=drive_link"
+      title: "Technical Certification 1",
+      issuer: "Professional Certification",
+      image: "https://drive.google.com/thumbnail?id=1ao_a9XRIdUpLhLWU69M9xZ-gRupWM3S5&sz=w800",
+      link: "https://drive.google.com/file/d/1ao_a9XRIdUpLhLWU69M9xZ-gRupWM3S5/view?usp=drive_link"
+    },
+    {
+      title: "Technical Certification 2",
+      issuer: "Professional Certification",
+      image: "https://drive.google.com/thumbnail?id=1Gerv26LDlU3Xas4ObSd81ydsKw4LNPEY&sz=w800",
+      link: "https://drive.google.com/file/d/1Gerv26LDlU3Xas4ObSd81ydsKw4LNPEY/view?usp=sharing"
+    },
+    {
+      title: "Technical Certification 3",
+      issuer: "Professional Certification",
+      image: "https://drive.google.com/thumbnail?id=1wmEUI1yL1fdy6jec_RgIvz6Yt2K37Wmz&sz=w800",
+      link: "https://drive.google.com/file/d/1wmEUI1yL1fdy6jec_RgIvz6Yt2K37Wmz/view?usp=drive_link"
+    },
+    {
+      title: "Technical Certification 4",
+      issuer: "Professional Certification",
+      image: "https://drive.google.com/thumbnail?id=1WGfuy9S0xKf3OvPicVb6xQ8hgcx7EoiV&sz=w800",
+      link: "https://drive.google.com/file/d/1WGfuy9S0xKf3OvPicVb6xQ8hgcx7EoiV/view?usp=sharing"
     },
     {
       title: "Responsive Web Design",

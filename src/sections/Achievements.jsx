@@ -22,8 +22,8 @@ const Achievements = () => {
           <TiltCard key={index} delay={index * 0.1}>
             <div className="relative bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl rounded-2xl border border-white/40 dark:border-slate-700/50 shadow-lg hover:shadow-2xl transition-all h-full flex flex-col overflow-hidden" style={{ transform: "translateZ(30px)" }}>
               {achievement.image && (
-                <div className="w-full h-48 overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-white/20 dark:border-slate-700/50 text-center relative group/img rounded-t-2xl" style={{ transform: "translateZ(40px)" }}>
-                  <img src={achievement.image} alt={achievement.title || achievement} className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110" loading="lazy" />
+                <div className="w-full h-48 overflow-hidden bg-slate-100 dark:bg-slate-800/80 border-b border-white/20 dark:border-slate-700/50 text-center relative group/img rounded-t-2xl p-4 flex items-center justify-center" style={{ transform: "translateZ(40px)" }}>
+                  <img src={achievement.image} alt={achievement.title || achievement} className="w-full h-full object-contain transition-transform duration-700 group-hover/img:scale-110 drop-shadow-xl" loading="lazy" />
                 </div>
               )}
               <div className="p-6 flex gap-4 items-start flex-grow" style={{ transform: "translateZ(40px)" }}>
