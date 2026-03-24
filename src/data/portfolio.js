@@ -128,11 +128,10 @@ export const portfolioData = {
     },
     {
       title: "Earned 5-star rating in Python on HackerRank",
-      image: "https://img.shields.io/badge/HackerRank-5%20Star%20Python-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
+      image: "/python_5star.png"
     },
     {
-      title: "Earned multiple badges in Problem Solving, C++, Java, C language, and 10 Days of JS",
-      image: "https://img.shields.io/badge/HackerRank-Multiple%20Badges-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white"
+      title: "Earned multiple badges in Problem Solving, C++, Java, C language, and 10 Days of JS"
     }
   ],
   certifications: [

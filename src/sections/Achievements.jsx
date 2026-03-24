@@ -44,15 +44,15 @@ const Achievements = () => {
 
                 {/* Cover Image for Leetcode and HackerRank Shields */}
                 {achievement.image && (
-                  <div className="w-full h-64 overflow-hidden bg-slate-950 relative group/img rounded-t-[2rem] flex items-center justify-center p-6" style={{ transform: "translateZ(40px)" }}>
+                  <div className="w-full h-48 overflow-hidden bg-slate-950 relative group/img rounded-t-[2rem] flex items-center justify-center p-4 pb-0" style={{ transform: "translateZ(40px)" }}>
                     {/* Subtle corner glares */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-0 left-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl"></div>
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10 pointer-events-none"></div>
                     
-                    {/* Zoomed in object-contain to ensure no cropping */}
-                    <img src={achievement.image} alt={achievement.title} className="max-w-full max-h-full object-contain transition-transform duration-1000 group-hover/img:scale-110 drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)] z-20" loading="lazy" />
+                    {/* Zoomed in object-contain with max-width restriction for perfect framing */}
+                    <img src={achievement.image} alt={achievement.title} className="max-w-[85%] max-h-[90%] object-contain object-bottom transition-transform duration-1000 group-hover/img:scale-110 drop-shadow-[0_10px_25px_rgba(255,255,255,0.05)] z-20" loading="lazy" />
                   </div>
                 )}
                 
@@ -79,20 +79,33 @@ const Achievements = () => {
                   {isMultipleBadges && (
                     <div className="mt-auto w-full pt-4 border-t border-slate-200 dark:border-slate-700/50" style={{ transform: "translateZ(60px)" }}>
                       <p className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-4">My Badges</p>
-                      <div className="flex flex-wrap gap-3">
-                        {['Problem Solving', 'C++', 'Java', 'Python', '10 Days of JS'].map((badge, i) => (
-                          <div key={i} className={`relative flex items-center justify-center p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 shadow-sm transition-transform hover:scale-110 hover:shadow-md ${badge === 'Python' ? 'border-amber-400 dark:border-amber-500 shadow-amber-500/20' : ''}`} title={badge}>
-                            <div className={`flex flex-col items-center gap-1 ${badge === 'Python' ? 'text-amber-500 text-shadow-sm' : 'text-slate-500 dark:text-slate-400'}`}>
-                              {getBadgeIcon(badge)}
-                              <span className="text-[10px] font-bold whitespace-nowrap">{badge}</span>
+                      <div className="flex flex-wrap justify-between gap-1">
+                        {['Problem Solving', 'C++', 'Java', 'Python', '10 Days of JS', 'C language'].map((badge, i) => {
+                          const isPython = badge === 'Python';
+                          return (
+                            <div key={i} className="flex flex-col items-center group/badge transform transition-all hover:z-10 w-[15%] min-w-[50px]">
+                              {/* Actual CSS Hexagon Shape */}
+                              <div 
+                                className={`relative flex items-center justify-center w-auto aspect-[1/1.15] w-full mb-1 transition-transform duration-300 group-hover/badge:-translate-y-2 group-hover/badge:scale-110
+                                ${isPython ? 'bg-gradient-to-br from-yellow-400 to-amber-500 drop-shadow-md' : 'bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800'}`}
+                                style={{
+                                  clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
+                                }}
+                              >
+                                <div className={`${isPython ? 'text-slate-900 drop-shadow-sm' : 'text-slate-600 dark:text-slate-300'}`}>
+                                  {getBadgeIcon(badge)}
+                                </div>
+                              </div>
+                              
+                              <span className="text-[9px] font-bold text-slate-600 dark:text-slate-400 text-center leading-tight h-6 flex items-center break-words max-w-full px-0.5">{badge}</span>
+                              
+                              <div className="flex gap-[1px] mt-0.5">
+                                {[1,2,3].map(star => <span key={`s${star}`} className="text-[8px] text-amber-500">★</span>)}
+                                {isPython && [4,5].map(star => <span key={`s${star}`} className="text-[8px] text-amber-500">★</span>)}
+                              </div>
                             </div>
-                            {/* Star ratings */}
-                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 flex gap-[1px]">
-                              {[1,2,3].map(star => <span key={star} className="text-[8px] text-amber-500">★</span>)}
-                              {badge === 'Python' && [4,5].map(star => <span key={star} className="text-[8px] text-amber-500">★</span>)}
-                            </div>
-                          </div>
-                        ))}
+                          )
+                        })}
                       </div>
                     </div>
                   )}
